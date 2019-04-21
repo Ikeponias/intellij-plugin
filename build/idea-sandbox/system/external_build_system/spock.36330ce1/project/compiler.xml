@@ -1,0 +1,8 @@
+<project>
+  <component name="ExternalCompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="com.example.spock.main" target="11" />
+      <module name="com.example.spock.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

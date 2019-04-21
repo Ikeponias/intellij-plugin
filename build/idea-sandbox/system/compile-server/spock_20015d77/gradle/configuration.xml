@@ -1,0 +1,27 @@
+<gradle-project-configuration>
+  <resource-processing>
+    <gradle-module name="com.example.spock.main">
+      <GradleModuleResourceConfiguration>
+        <id>
+          <ModuleVersion>
+            <groupId>com.example</groupId>
+            <artifactId>spock:main</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+          </ModuleVersion>
+        </id>
+        <option name="overwrite" value="false" />
+        <option name="outputDirectory" />
+        <resources>
+          <resource filtered="false">
+            <directory>/Users/ikedamasataka/MyPrograms/Java/spock/src/main/resources</directory>
+            <targetPath>/Users/ikedamasataka/MyPrograms/Java/spock/out/production/resources</targetPath>
+            <filters />
+            <includes />
+            <excludes />
+          </resource>
+        </resources>
+        <test-resources />
+      </GradleModuleResourceConfiguration>
+    </gradle-module>
+  </resource-processing>
+</gradle-project-configuration>
