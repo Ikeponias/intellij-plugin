@@ -4,6 +4,8 @@
     <location key="com.intellij.ide.util.TipDialog.0.0.3360.2100@192dpi" x="880" y="658" />
     <location key="ide.internal.focus.trace.dialog.0.0.3360.2100@192dpi" x="1204" y="472" />
     <location key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.3360.2100@192dpi" x="608" y="316" />
+    <location key="WELCOME_SCREEN.0.0.2880.1800@192dpi" x="1438" y="768" />
+    <location key="ProcessPopupWindow.0.0.2880.1800@192dpi" x="1432" y="1332" />
     <size key="GridCell.Tab.0.right.0.0.3360.2100@192dpi" width="3276" height="792" />
     <size key="GridCell.Tab.0.left.0.0.3360.2100@192dpi" width="3276" height="792" />
     <size key="GridCell.Tab.0.center.0.0.3360.2100@192dpi" width="3276" height="792" />
@@ -12,5 +14,6 @@
     <size key="GridCell.Tab.1.center.0.0.3360.2100@192dpi" width="3276" height="792" />
     <size key="GridCell.Tab.1.right.0.0.3360.2100@192dpi" width="3276" height="792" />
     <size key="GridCell.Tab.1.bottom.0.0.3360.2100@192dpi" width="3276" height="792" />
+    <size key="ProcessPopupWindow.0.0.2880.1800@192dpi" width="800" height="352" />
   </component>
 </application>

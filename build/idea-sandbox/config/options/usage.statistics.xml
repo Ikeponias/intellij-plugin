@@ -10,11 +10,11 @@
     <feature id="editing.completion.finishBySmartEnter" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.popup.symbol" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="find.recent.search" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="editing.completion.replace" count="0" last-shown="1555846143921" last-used="0" shown-count="18" />
+    <feature id="editing.completion.replace" count="0" last-shown="1555919959543" last-used="0" shown-count="32" />
     <feature id="switcher" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.complete.statement" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="navigation.goto.inspection" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="editing.completion.variable.name" count="6" last-shown="0" last-used="1555846143926" shown-count="0" />
+    <feature id="editing.completion.variable.name" count="9" last-shown="0" last-used="1555919959554" shown-count="0" />
     <feature id="navigation.popup.file" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.overrideimplement" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="editing.completion.smarttype.casting" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -80,10 +80,10 @@
       <option name="lastDate" value="0" />
     </completionStatsTag>
     <fixesStatsTag>
-      <option name="invocations" value="4" />
+      <option name="invocations" value="11" />
       <option name="startDate" value="1555772400000" />
-      <option name="dayCount" value="1" />
-      <option name="lastDate" value="1555772400000" />
+      <option name="dayCount" value="2" />
+      <option name="lastDate" value="1555858800000" />
     </fixesStatsTag>
   </component>
   <component name="UsagesStatistic" show-notification="false" />

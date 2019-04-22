@@ -2,18 +2,24 @@
   <component name="RecentProjectsManager">
     <option name="recentPaths">
       <list>
+        <option value="$USER_HOME$/.ghq/github.com/Ikeponias/TodolistWithMyBatis" />
         <option value="$USER_HOME$/MyPrograms/Java/spock" />
       </list>
     </option>
-    <option name="openPaths">
-      <list>
-        <option value="$USER_HOME$/MyPrograms/Java/spock" />
-      </list>
-    </option>
-    <option name="lastPath" value="$USER_HOME$/MyPrograms/Java/spock" />
     <option name="pid" value="" />
     <option name="additionalInfo">
       <map>
+        <entry key="$USER_HOME$/.ghq/github.com/Ikeponias/TodolistWithMyBatis">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IC-183.5912.21" />
+              <option name="productionCode" value="IC" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1555921299063" />
+              <option name="buildTimestamp" value="1551184369448" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
         <entry key="$USER_HOME$/MyPrograms/Java/spock">
           <value>
             <RecentProjectMetaInfo>
