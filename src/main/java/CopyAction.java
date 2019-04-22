@@ -19,7 +19,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class CopyAction extends PsiElementBaseIntentionAction {
 
-    private static Map<String, String> initialValueLUT = new HashMap<>();
+    private static final String NEW_LINE;
+    private static final Map<String, String> initialValueLUT = new HashMap<>();
 
     static {
         initialValueLUT.put("boolean", "false");
@@ -43,6 +44,7 @@ public class CopyAction extends PsiElementBaseIntentionAction {
         initialValueLUT.put("char", "\'\'");
         initialValueLUT.put("LocalDateTime", "LocalDateTime.now()");
         initialValueLUT.put("LocalDate", "LocalDate.now()");
+        NEW_LINE = System.getProperty("line.separator");
     }
 
     @Override
@@ -75,9 +77,9 @@ public class CopyAction extends PsiElementBaseIntentionAction {
     public String getText() { return "Add Field to ClipBoard";}
 
     private String makeText(final String className, final PsiField[] psiFields) {
-        String clipBoardText = "new " + className + "(";
+        String clipBoardText = "new " + className + "(" + NEW_LINE;
         clipBoardText += Arrays.stream(psiFields)
-                                 .map(p -> Optional.ofNullable(initialValueLUT
+                                 .map(p -> "/* " + p.getName() + " */ " + Optional.ofNullable(initialValueLUT
                                                                        .get(p.getType()
                                                                                     .toString()
                                                                                     .split(":")[1]))
@@ -85,7 +87,7 @@ public class CopyAction extends PsiElementBaseIntentionAction {
                                                                             .toString()
                                                                             .split(":")[1] + "()"))
                                  .collect(
-                                         Collectors.joining(", "));
+                                         Collectors.joining("," + NEW_LINE));
         clipBoardText += ")";
 
         return clipBoardText;

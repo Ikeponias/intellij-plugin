@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>org.jetbrains</id>
+  <id>jp.ikeponias</id>
   <name>Copy Fields</name>
   <version>1.0-SNAPSHOT</version>
   <vendor email="dummy" url="dummy">dummy</vendor>
