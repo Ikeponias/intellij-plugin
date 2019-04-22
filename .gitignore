@@ -67,5 +67,5 @@ fabric.properties
 
 .gradle/
 build/
-.gradle/
+
 gradle.properties

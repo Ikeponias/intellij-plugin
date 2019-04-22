@@ -22,15 +22,16 @@ apply plugin: 'java'
 
 intellij {
     version '2018.3.5'
+    pluginName 'Copy Fields'
+    intellij.updateSinceUntilBuild false
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      change Notes.<br>
+      <em>initial deploy</em>"""
 }
 
 publishPlugin {
     username intellijPublishUsername
     password intellijPublishPassword
-    channels 'alpha'
 }

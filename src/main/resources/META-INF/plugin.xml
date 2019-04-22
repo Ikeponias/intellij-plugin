@@ -1,10 +1,19 @@
 <idea-plugin>
   <id>org.jetbrains</id>
-  <name>Hello Action Project</name>
-  <version>0.0.1</version>
+  <name>Copy Fields</name>
+  <version>1.0-SNAPSHOT</version>
   <vendor email="dummy" url="dummy">dummy</vendor>
 
+  <description><![CDATA[
+    <p>Copy fields to clipboard</p>
+    <p>Copy fields to clipboard</p>
+    <p>Copy fields to clipboard</p>
+    <p>Copy fields to clipboard</p>
+    <p>Copy fields to clipboard</p>
+    ]]></description>
+
   <depends>com.intellij.modules.lang</depends>
+  <idea-version since-build="150.0"/>
 
   <extensions defaultExtensionNs="com.intellij">
     <intentionAction>
