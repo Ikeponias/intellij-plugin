@@ -1,32 +1,0 @@
-/Header Record For PersistentHashMapValueStorage	lombok
-groovy.allspring.boot.starter.web
-spock.coreorg.spockframework.corespring.boot.starter.testspring.boot.starter.jsonspring.boot.starterspring.boot.starter.tomcatorg.hibernate.validatorhibernate.validatorspring.webmvcspring.webmvc
-spring.web
-spring.webgroovy.jsonorg.codehaus.groovy.json
-groovy.nioorg.codehaus.groovy.nioorg.codehaus.groovy.macrogroovy.macrogroovy.templates org.codehaus.groovy.templatesgroovy.testorg.codehaus.groovy.test
-groovy.sqlorg.codehaus.groovy.sql
-groovy.xmlorg.codehaus.groovy.xml	groovyorg.codehaus.groovyjunitjunit!spring.boot.test.autoconfigure!spring.boot.test.autoconfigurespring.boot.testspring.boot.test	json.path	json.pathassertj.coreorg.assertj.coremockito.coreorg.mockitohamcrest.libraryhamcrest.libraryhamcrest.corehamcrest.core
-jsonassert
-jsonassertspring.testspring.testspring.boot.autoconfigurespring.boot.autoconfigurespring.bootspring.bootspring.contextspring.contextspring.expressionspring.expression
-spring.aop
-spring.aopspring.beansspring.beansspring.corespring.corexmlunit.coreorg.xmlunitspring.boot.starter.loggingjavax.annotation.apijava.annotationjackson.datatype.jdk8&#com.fasterxml.jackson.datatype.jdk8jackson.datatype.jsr310(%com.fasterxml.jackson.datatype.jsr310	snakeyaml	snakeyaml!jackson.module.parameter.names*'com.fasterxml.jackson.module.paramnames!com.fasterxml.jackson.databindjackson.databindtomcat.embed.websockettomcat.embed.websockettomcat.embed.coretomcat.embed.coretomcat.embed.eltomcat.embed.elvalidation.apijava.validationjboss.loggingorg.jboss.logging	classmatecom.fasterxml.classmate
-json.smart
-json.smartlogback.classiclogback.classiclog4j.to.slf4jorg.apache.logging.slf4jjul.to.slf4jjul.to.slf4j	slf4j.api	slf4j.api
-byte.buddybyte.buddy.agent	objenesis	objenesisandroid.jsonandroid.json
-spring.jcl
-spring.jcljackson.annotationsjackson.annotationscom.fasterxml.jackson.corejackson.coreaccessors.smartaccessors.smartlogback.corelogback.core	log4j.apiasmasm spring.boot.starter.thymeleafspring.boot.starter spring.boot.starter.thymeleafspring.boot.starterspring.bootspring.bootspring.boot.autoconfigurespring.boot.starter.loggingspring.boot.starter.loggingspring.boot.autoconfigurelogback.classiclogback.classiclogback.corelogback.corelog4j.to.slf4jorg.apache.logging.slf4j	log4j.apijul.to.slf4jjul.to.slf4jjava.annotationjavax.annotation.api	snakeyaml	snakeyamlthymeleaf.spring5	thymeleafthymeleaf.spring5	thymeleaf
-attoparser
-attoparser	unbescape	unbescapethymeleaf.extras.java8timespring.boot.starter.webspring.boot.starter.jsonspring.boot.starter.webspring.boot.starter.jsonthymeleaf.extras.java8timejackson.datatype.jsr310jackson.datatype.jdk8&#com.fasterxml.jackson.datatype.jdk8(%com.fasterxml.jackson.datatype.jsr310!jackson.module.parameter.names*'com.fasterxml.jackson.module.paramnamesspring.boot.starter.tomcatspring.boot.starter.tomcattomcat.embed.eltomcat.embed.coretomcat.embed.coretomcat.embed.eltomcat.embed.websockettomcat.embed.websocketorg.hibernate.validatorhibernate.validatorvalidation.apijava.validationjboss.loggingorg.jboss.logging
-spring.web
-spring.webspring.beansspring.beansspring.webmvcspring.webmvc
-spring.aop
-spring.aopspring.contextspring.contextspring.expressionspring.expressionmybatis.spring.boot.startermybatis.spring.boot.starterspring.boot.starter.jdbcspring.boot.starter.jdbcHikariCPcom.zaxxer.hikarispring.jdbcspring.jdbc	spring.tx	spring.tx$!mybatis.spring.boot.autoconfigure
-mybatis$!mybatis.spring.boot.autoconfigure
-mybatismybatis.springmybatis.springh2h2	lombokspring.boot.starter.testspring.boot.starter.testspring.boot.testspring.boot.test!spring.boot.test.autoconfigure!spring.boot.test.autoconfigure	json.path	json.path
-json.smart
-json.smartaccessors.smartaccessors.smartasmasmjunitjunitassertj.coreassertj.coremockito.coreorg.mockitobyte.buddy.agentnet.bytebuddy.agent	objenesis	objenesishamcrest.corehamcrest.corehamcrest.libraryhamcrest.library
-jsonassert
-jsonassertandroid.jsonandroid.jsonspring.corespring.core
-spring.jcl
-spring.jclspring.testspring.testxmlunit.corexmlunit.corespringfox.swagger2springfox.swagger2swagger.annotationsswagger.annotationsswagger.modelsswagger.modelsspringfox.spispringfox.spispringfox.schemaspringfox.schemaspringfox.swagger.commonspringfox.swagger.commonspringfox.spring.webspringfox.spring.webguavaguava	classmatecom.fasterxml.classmate	slf4j.api	slf4j.apispring.plugin.corespring.plugin.corespring.plugin.metadataspring.plugin.metadata	mapstructorg.mapstructspringfox.swagger.uispringfox.swagger.uispringfox.corespringfox.core
-byte.buddynet.bytebuddyjackson.databind!com.fasterxml.jackson.databindjackson.annotationsjackson.annotationsjackson.corecom.fasterxml.jackson.core

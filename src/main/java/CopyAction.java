@@ -4,6 +4,7 @@ import java.awt.datatransfer.StringSelection;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.intellij.codeInsight.intention.PsiElementBaseIntentionAction;
@@ -76,11 +77,17 @@ public class CopyAction extends PsiElementBaseIntentionAction {
     private String makeText(final String className, final PsiField[] psiFields) {
         String clipBoardText = "new " + className + "(";
         clipBoardText += Arrays.stream(psiFields)
-                                 .map(p -> initialValueLUT
-                                                   .get(p.getType().toString().split(":")[1]))
+                                 .map(p -> Optional.ofNullable(initialValueLUT
+                                                                       .get(p.getType()
+                                                                                    .toString()
+                                                                                    .split(":")[1]))
+                                                   .orElse("new " + p.getType()
+                                                                            .toString()
+                                                                            .split(":")[1] + "()"))
                                  .collect(
                                          Collectors.joining(", "));
         clipBoardText += ")";
+
         return clipBoardText;
     }
 

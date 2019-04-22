@@ -1,9 +1,0 @@
-<project>
-  <component name="ExternalModuleListStorage">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.spock.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.spock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.spock.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.spock.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.spock.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.spock.test.iml" />
-    </modules>
-  </component>
-</project>
