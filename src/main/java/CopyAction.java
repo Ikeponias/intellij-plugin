@@ -44,6 +44,8 @@ public class CopyAction extends PsiElementBaseIntentionAction {
         initialValueLUT.put("char", "\'\'");
         initialValueLUT.put("LocalDateTime", "LocalDateTime.now()");
         initialValueLUT.put("LocalDate", "LocalDate.now()");
+        initialValueLUT.put("List", "[]");
+
         NEW_LINE = System.getProperty("line.separator");
     }
 
@@ -80,9 +82,7 @@ public class CopyAction extends PsiElementBaseIntentionAction {
         String clipBoardText = "new " + className + "(" + NEW_LINE;
         clipBoardText += Arrays.stream(psiFields)
                                  .map(p -> "/* " + p.getName() + " */ " + Optional.ofNullable(initialValueLUT
-                                                                       .get(p.getType()
-                                                                                    .toString()
-                                                                                    .split(":")[1]))
+                                                                       .get(p.getTypeElement().getFirstChild().getFirstChild().getText()))
                                                    .orElse("new " + p.getType()
                                                                             .toString()
                                                                             .split(":")[1] + "()"))
@@ -92,5 +92,4 @@ public class CopyAction extends PsiElementBaseIntentionAction {
 
         return clipBoardText;
     }
-
 }
