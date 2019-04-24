@@ -21,7 +21,6 @@ apply plugin: 'org.jetbrains.intellij'
 apply plugin: 'java'
 
 intellij {
-    version '2018.3.5'
     pluginName 'Copy Fields'
     intellij.updateSinceUntilBuild false
 }
