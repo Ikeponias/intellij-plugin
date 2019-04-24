@@ -5,11 +5,9 @@
   <vendor email="dummy" url="dummy">dummy</vendor>
 
   <description><![CDATA[
-    <p>Copy fields to clipboard</p>
-    <p>Copy fields to clipboard</p>
-    <p>Copy fields to clipboard</p>
-    <p>Copy fields to clipboard</p>
-    <p>Copy fields to clipboard</p>
+    <p>Copy all fields to clipboard</p>
+    <p>When you do intention action, you can choose menu.</p>
+    <p>If you choose "Add Field to ClipBoard", current class fields and each default values added your clipboard.</p>
     ]]></description>
 
   <depends>com.intellij.modules.lang</depends>
