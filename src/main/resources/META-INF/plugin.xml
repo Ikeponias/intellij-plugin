@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>jp.ikeponias</id>
   <name>Copy Fields</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <vendor email="dummy" url="dummy">dummy</vendor>
 
   <description><![CDATA[
@@ -16,9 +16,6 @@
   <extensions defaultExtensionNs="com.intellij">
     <intentionAction>
       <className>CopyAction</className>
-    </intentionAction>
-    <intentionAction>
-      <className>MakeBuilderAction</className>
     </intentionAction>
   </extensions>
 </idea-plugin>
