@@ -13,6 +13,7 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiField;
+import com.intellij.psi.PsiModifier;
 import com.intellij.util.IncorrectOperationException;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
@@ -80,12 +81,18 @@ public class CopyAction extends PsiElementBaseIntentionAction {
 
     private String makeText(final String className, final PsiField[] psiFields) {
         String clipBoardText = "new " + className + "(" + NEW_LINE;
+
         clipBoardText += Arrays.stream(psiFields)
-                                 .map(p -> "/* " + p.getName() + " */ " + Optional.ofNullable(initialValueLUT
-                                                                       .get(p.getTypeElement().getFirstChild().getFirstChild().getText()))
-                                                   .orElse("new " + p.getType()
-                                                                            .toString()
-                                                                            .split(":")[1] + "()"))
+                                 .filter(p -> !p.hasModifierProperty(PsiModifier.STATIC))
+                                 .map(p -> "/* " + p.getName() + " */ " + Optional.ofNullable(
+                                         initialValueLUT
+                                                 .get(p.getTypeElement().getFirstChild()
+                                                              .getFirstChild().getText()))
+                                                                                  .orElse("new "
+                                                                                                  + p.getType()
+                                                                                                            .toString()
+                                                                                                            .split(":")[1]
+                                                                                                  + "()"))
                                  .collect(
                                          Collectors.joining("," + NEW_LINE));
         clipBoardText += ")";
