@@ -15,8 +15,11 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiField;
 import com.intellij.psi.PsiModifier;
 import com.intellij.util.IncorrectOperationException;
+import org.apache.commons.lang.ArrayUtils;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.Nonnull;
 
 public class CopyAction extends PsiElementBaseIntentionAction {
 
@@ -80,23 +83,28 @@ public class CopyAction extends PsiElementBaseIntentionAction {
     public String getText() { return "Add Field to ClipBoard";}
 
     private String makeText(final String className, final PsiField[] psiFields) {
+        if(ArrayUtils.isEmpty(psiFields)) return null;
+
         String clipBoardText = "new " + className + "(" + NEW_LINE;
 
         clipBoardText += Arrays.stream(psiFields)
                                  .filter(p -> !p.hasModifierProperty(PsiModifier.STATIC))
-                                 .map(p -> "/* " + p.getName() + " */ " + Optional.ofNullable(
-                                         initialValueLUT
-                                                 .get(p.getTypeElement().getFirstChild()
-                                                              .getFirstChild().getText()))
-                                                                                  .orElse("new "
-                                                                                                  + p.getType()
-                                                                                                            .toString()
-                                                                                                            .split(":")[1]
-                                                                                                  + "()"))
-                                 .collect(
-                                         Collectors.joining("," + NEW_LINE));
+                                 .map(p -> buildText(p))
+                                 .collect(Collectors.joining("," + NEW_LINE));
         clipBoardText += ")";
 
         return clipBoardText;
+    }
+
+    private String buildText(@Nonnull final PsiField psiField) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("/* " + psiField.getName() + " */ ");
+        if(psiField.getType().toString().contains("List")) {
+            return sb.append("[]").toString();
+        };
+
+        return sb.append(Optional.ofNullable(
+                initialValueLUT.get(psiField.getTypeElement().getFirstChild().getText()))
+                .orElse("new " + psiField.getType().toString().split(":")[1] + "()")).toString();
     }
 }
