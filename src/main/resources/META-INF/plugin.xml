@@ -1,8 +1,8 @@
 <idea-plugin>
   <id>jp.ikeponias</id>
-  <name>Copy Fields</name>
-  <version>1.0.1</version>
-  <vendor email="dummy" url="dummy">dummy</vendor>
+  <name>Copy Class Fields</name>
+  <version>1.0.2</version>
+  <vendor email="dummy" url="dummy">Ikeponias</vendor>
 
   <description><![CDATA[
     <p>Copy all fields to clipboard</p>
@@ -11,7 +11,10 @@
     ]]></description>
 
   <depends>com.intellij.modules.lang</depends>
-  <idea-version since-build="150.0"/>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.java</depends>
+  <depends>com.intellij.java</depends>
+  <idea-version since-build="203"/>
 
   <extensions defaultExtensionNs="com.intellij">
     <intentionAction>

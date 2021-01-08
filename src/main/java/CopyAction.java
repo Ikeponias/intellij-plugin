@@ -14,6 +14,8 @@ import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiField;
 import com.intellij.psi.PsiModifier;
+import com.intellij.psi.impl.source.PsiClassImpl;
+import com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl;
 import com.intellij.util.IncorrectOperationException;
 import org.apache.commons.lang.ArrayUtils;
 import org.jetbrains.annotations.Nls;
@@ -56,8 +58,9 @@ public class CopyAction extends PsiElementBaseIntentionAction {
     @Override
     public void invoke(@NotNull Project project, Editor editor,
                        @NotNull PsiElement element) throws IncorrectOperationException {
-        if (element.getParent() instanceof PsiClass) {
-            final PsiClass psiClass = ((PsiClass) element.getParent());
+        final PsiWhiteSpaceImpl psiWhiteSpace = (PsiWhiteSpaceImpl) element;
+        if (psiWhiteSpace.getParent() != null) {
+            final PsiClassImpl psiClass = (PsiClassImpl) psiWhiteSpace.getParent();
             final Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
             final String clipBoardText = makeText(psiClass.getName(), psiClass.getAllFields());
             final StringSelection selection = new StringSelection(clipBoardText);
