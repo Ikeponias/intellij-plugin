@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.ikeponias'
-version '1.0.2'
+version '1.0.3'
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ apply plugin: 'java'
 
 intellij {
     plugins = ['com.intellij.java']
-    pluginName 'Copy Fields'
+    pluginName 'Copy Class Fields'
     intellij.updateSinceUntilBuild false
     version '2020.3'
 }
