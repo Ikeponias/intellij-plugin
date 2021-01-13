@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>jp.ikeponias</id>
   <name>Copy Class Fields</name>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <vendor email="dummy" url="dummy">Ikeponias</vendor>
 
   <description><![CDATA[
