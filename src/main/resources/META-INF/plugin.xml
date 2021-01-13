@@ -1,13 +1,14 @@
 <idea-plugin>
   <id>jp.ikeponias</id>
   <name>Copy Class Fields</name>
-  <version>1.0.3</version>
+  <version>1.1.0</version>
   <vendor email="dummy" url="dummy">Ikeponias</vendor>
 
   <description><![CDATA[
     <p>Copy all fields to clipboard</p>
     <p>When you do intention action, you can choose menu.</p>
-    <p>If you choose "Add Field to ClipBoard", current class fields and each default values added your clipboard.</p>
+    <p>If you choose "Add fields to clipBoard", current class fields and each default values added your clipboard.</p>
+    <p>And if you choose "Copy fields to clipBoard for Builder", current class fields and each default values added your clipboard for lombok builder.</p>
     ]]></description>
 
   <depends>com.intellij.modules.lang</depends>
@@ -19,6 +20,9 @@
   <extensions defaultExtensionNs="com.intellij">
     <intentionAction>
       <className>CopyAction</className>
+    </intentionAction>
+    <intentionAction>
+      <className>CopyBuilderAction</className>
     </intentionAction>
   </extensions>
 </idea-plugin>

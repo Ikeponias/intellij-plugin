@@ -1,10 +1,3 @@
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.util.Arrays;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import com.intellij.codeInsight.intention.PsiElementBaseIntentionAction;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
@@ -19,8 +12,14 @@ import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.util.Arrays;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
-public class CopyAction extends PsiElementBaseIntentionAction {
+public class CopyBuilderAction extends PsiElementBaseIntentionAction {
 
     @Override
     public void invoke(@NotNull Project project, Editor editor,
@@ -50,18 +49,17 @@ public class CopyAction extends PsiElementBaseIntentionAction {
 
     @NotNull
     @Override
-    public String getText() { return "Copy fields to clipBoard";}
+    public String getText() { return "Copy fields to clipBoard for Builder";}
 
     private String makeText(final String className, final PsiField[] psiFields) {
         if(ArrayUtils.isEmpty(psiFields)) return null;
 
-        String clipBoardText = "new " + className + "(" + InitialValue.NEW_LINE;
+        String clipBoardText = className + ".builder()" + InitialValue.NEW_LINE;
 
         clipBoardText += Arrays.stream(psiFields)
                                  .filter(p -> !p.hasModifierProperty(PsiModifier.STATIC))
                                  .map(this::buildText)
-                                 .collect(Collectors.joining("," + InitialValue.NEW_LINE));
-        clipBoardText += ")";
+                                 .collect(Collectors.joining(InitialValue.NEW_LINE));
 
         return clipBoardText;
     }
@@ -69,12 +67,16 @@ public class CopyAction extends PsiElementBaseIntentionAction {
     private String buildText(@Nonnull final PsiField psiField) {
         StringBuilder sb = new StringBuilder();
         sb.append("/* ").append(psiField.getName()).append(" */ ");
+        sb.append(".").append(psiField.getName()).append("(");
+
         if(psiField.getType().toString().contains("List")) {
             return sb.append("[]").toString();
         };
 
-        return sb.append(Optional.ofNullable(
+        sb.append(Optional.ofNullable(
                 InitialValue.VALUE_LUT.get(psiField.getTypeElement().getFirstChild().getText()))
-                .orElse("new " + psiField.getType().toString().split(":")[1] + "()")).toString();
+                .orElse("new " + psiField.getType().toString().split(":")[1] + "()"));
+
+        return sb.append(")").toString();
     }
 }
