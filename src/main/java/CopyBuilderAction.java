@@ -66,7 +66,6 @@ public class CopyBuilderAction extends PsiElementBaseIntentionAction {
 
     private String buildText(@Nonnull final PsiField psiField) {
         StringBuilder sb = new StringBuilder();
-        sb.append("/* ").append(psiField.getName()).append(" */ ");
         sb.append(".").append(psiField.getName()).append("(");
 
         if(psiField.getType().toString().contains("List")) {
