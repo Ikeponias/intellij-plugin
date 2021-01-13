@@ -20,5 +20,8 @@
     <intentionAction>
       <className>CopyAction</className>
     </intentionAction>
+    <intentionAction>
+      <className>CopyBuilderAction</className>
+    </intentionAction>
   </extensions>
 </idea-plugin>
